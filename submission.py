@@ -63,6 +63,7 @@ def main():
     if args.config_file is not None:
         update_config(args.config_file)
     os.environ['CUDA_VISIBLE_DEVICES'] = opt.train.gpus
+    print(os.environ['CUDA_VISIBLE_DEVICES'])
     cudnn.benchmark = True
     submission(args)
 
